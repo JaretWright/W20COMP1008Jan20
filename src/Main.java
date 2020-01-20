@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -43,10 +44,17 @@ public class Main extends Application {
         //display the contents of each players' hand and then we will take a break
         System.out.printf("Player 1's hand: %s%n",p1Hand);
         System.out.printf("Player 2's hand: %s%n",p2Hand);
+
+        //we need to start the Application (GUI)
+        launch(args);
+
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("CardView.fxml"));
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 }
