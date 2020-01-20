@@ -54,6 +54,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("CardView.fxml"));
         Scene scene = new Scene(root);
+        primaryStage.setTitle("Card Viewer");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
