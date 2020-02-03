@@ -37,6 +37,29 @@ public class GameOfWar {
         }
     }
 
+    public ArrayList<Card> getP1Hand() {
+        return p1Hand;
+    }
+
+    public ArrayList<Card> getP2Hand() {
+        return p2Hand;
+    }
+
+    /**
+     * This returns the amount of cards in player 1's hand
+     */
+    public int getNumOfCardsP1()
+    {
+        return p1Hand.size();
+    }
+
+    /**
+     * This returns the amount of cards in player 2's hand
+     */
+    public int getNumOfCardsP2()
+    {
+        return p2Hand.size();
+    }
 
     /**
      * This method will simulate playing a round or hand of the game of war
