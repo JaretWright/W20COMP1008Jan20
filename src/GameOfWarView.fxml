@@ -21,7 +21,7 @@
                <children>
                   <ImageView fx:id="p1backOfDeckImageView" fitHeight="400.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="p1CurrentCardImageVIew" fitHeight="400.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="p2CurrentCardImageView" fitHeight="400.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="p2CurrentCardImageVIew" fitHeight="400.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="p2backOfDeckImageView" fitHeight="400.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </HBox>
@@ -32,7 +32,7 @@
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" text="Play Hand">
+                  <Button mnemonicParsing="false" onAction="#playHand" text="Play Hand">
                      <font>
                         <Font size="36.0" />
                      </font>

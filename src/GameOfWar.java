@@ -1,3 +1,5 @@
+import javafx.scene.image.Image;
+
 import java.util.ArrayList;
 
 public class GameOfWar {
@@ -62,13 +64,80 @@ public class GameOfWar {
     }
 
     /**
+     * This method will get the Image of Player 1's top card
+     */
+    public Image getP1CardImage()
+    {
+        if (p1Hand.size()>0)
+        {
+            return p1Hand.get(0).getImage();
+        }
+        return null;
+    }
+
+    /**
+     * This method will get the Image of Player 1's top card
+     */
+    public Image getP2CardImage()
+    {
+        if (p2Hand.size()>0)
+        {
+            return p2Hand.get(0).getImage();
+        }
+        return null;
+    }
+
+    /**
      * This method will simulate playing a round or hand of the game of war
      */
     public void playHand(ArrayList<Card> pile)
     {
         if (p1Hand.size()>0 && p2Hand.size()>0)
         {
+            //get the value of each card
+            int p1CardValue = p1Hand.get(0).getFaceValue();
+            int p2CardValue = p2Hand.get(0).getFaceValue();
 
+            //add the Card objects to the pile
+            pile.add(p1Hand.remove(0));
+            pile.add(p2Hand.remove(0));
+
+            //p1 wins hand
+            if (p1CardValue>p2CardValue)
+            {
+                p1Hand.addAll(pile);
+                return;
+            }
+
+            //p2 wins hand
+            if (p2CardValue>p1CardValue)
+            {
+                p2Hand.addAll(pile);
+                return;
+            }
+
+            //We have WAR!!!
+            //check if player 1 has enough cards for war
+            if (p1Hand.size() < 4)
+            {
+                p2Hand.addAll(p1Hand);
+                p1Hand.clear();
+                return;
+            }
+
+            if (p2Hand.size() < 4)
+            {
+                p1Hand.addAll(p2Hand);
+                p2Hand.clear();
+                return;
+            }
+
+            for (int i=1; i<=3; i++)
+            {
+                pile.add(p1Hand.remove(0));
+                pile.add(p2Hand.remove(0));
+            }
+            playHand(pile);
         }
     }
 }
