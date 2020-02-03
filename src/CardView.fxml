@@ -21,7 +21,7 @@
                   </Button>
                </children>
             </StackPane>
-            <ImageView fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../Users/jwright/Pictures/Alexander-standing.jpg" />
                </image>

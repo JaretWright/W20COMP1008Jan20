@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class Main extends Application {
     public static void main(String[] args)
     {
+        launch(args);
         //Create a DeckOfCards
         //class name   variable name    calling the constructor
         Scanner        keyboard       = new Scanner(System.in);
@@ -46,7 +47,7 @@ public class Main extends Application {
         System.out.printf("Player 2's hand: %s%n",p2Hand);
 
         //we need to start the Application (GUI)
-        launch(args);
+
 
     }
 

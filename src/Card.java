@@ -8,7 +8,7 @@ public class Card {
     //these should be given initial, valid values
     private String suit, faceName;
     private int faceValue;
-    private Image image;
+//    private Image image;
 
     /**
      * This constructor accepts a Card's suit and face name to configure the card
@@ -21,12 +21,12 @@ public class Card {
         setSuit(suit);
         setFaceName(faceName);
         String fileName = faceName + "_of_" + suit +".png";
-        image = new Image("./images/"+fileName);
+//        image = new Image("./images/"+fileName);
     }
 
-    public Image getImage() {
-        return image;
-    }
+//    public Image getImage() {
+//        return image;
+//    }
 
     public String getSuit() {
         return suit;
